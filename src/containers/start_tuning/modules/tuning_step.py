@@ -20,7 +20,7 @@ def get_training_step(
     pretrained_vae_model_name_or_path,
     dataset_name,
     validation_prompt,
-    DATASET_NAME_MAPPING 
+    dataset_name_mapping 
 ):
     # Parameters
     train_instance_type = ParameterString(
@@ -31,7 +31,7 @@ def get_training_step(
         name="TrainingInstanceCount",
         default_value=1
     )
-    dataset_columns = DATASET_NAME_MAPPING.get(dataset_name.default_value, ("", ""))
+    dataset_columns = dataset_name_mapping.get(dataset_name.default_value, ("", ""))
     image_column = dataset_columns[0]
     caption_column = dataset_columns[1]
     pretrained_model_name_or_path = ParameterString(name="pretrained_model_name_or_path", default_value=pretrained_model_name_or_path)

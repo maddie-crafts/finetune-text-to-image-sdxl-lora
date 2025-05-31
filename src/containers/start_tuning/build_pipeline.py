@@ -53,7 +53,7 @@ def main():
 
     # Steps
     tuning_step, train_inst_type, train_inst_count = get_training_step(
-        role, sess, base_uri, args.pretrained_model_name_or_path, args.pretrained_vae_model_name_or_path, args.dataset_name, args.validation_prompt, args.DATASET_NAME_MAPPING 
+        role, sess, base_uri, args.pretrained_model_name_or_path, args.pretrained_vae_model_name_or_path, args.dataset_name, args.validation_prompt, args.dataset_name_mapping 
     )
 
 
