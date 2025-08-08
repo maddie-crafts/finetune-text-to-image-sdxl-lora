@@ -64,7 +64,7 @@ def main():
             train_inst_type,
             train_inst_count,
         ],
-        steps=[get_training_step]
+        steps=[tuning_step]
     )
 
     pipeline.upsert(role_arn=role)

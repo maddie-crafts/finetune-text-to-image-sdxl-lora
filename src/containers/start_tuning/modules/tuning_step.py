@@ -78,6 +78,7 @@ def get_training_step(
     estimator = PyTorch(
         entry_point="train.py",
         source_dir="src",
+        dependencies=["src/config.py", "src/model_loader.py", "src/data_handler.py", "src/trainer.py", "src/utils_train.py"],
         instance_type=train_instance_type,
         instance_count=train_instance_count,
         role=role,
